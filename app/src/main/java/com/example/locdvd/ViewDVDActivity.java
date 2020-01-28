@@ -41,13 +41,13 @@ public class ViewDVDActivity extends Activity {
     protected void onResume() {
         super.onResume();
 
-        txtTitreDVD.setText("Les vacances du petis nicolas");
-        txtAnneeDVD.setText(getString(R.string.anee_de_sortie,2014));
-        txtActeur1.setText("Valerie lemercier");
-        txtActeur2.setText("Kad Merad");
+        txtTitreDVD.setText(String.format(getString(R.string.titre_du_film),"Le petit nicolas"));
+        txtAnneeDVD.setText(String.format(getString(R.string.annee_de_sortie),2014));
+        txtActeur1.setText(String.format(getString(R.string.acteurs),"Acteur 1"));
+        txtActeur2.setText(String.format(getString(R.string.acteurs),"Acteur 2"));
         String resume = " c'est la fin de l'année scolaire, le moment tant attendu des vances est arrivé"+
                         "lkengleknglkengjrnk elkngelknglkeg";
-        txtResumeFilm.setText(resume);
+        txtResumeFilm.setText(String.format(getString(R.string.resume),resume));
     }
 
     @Override

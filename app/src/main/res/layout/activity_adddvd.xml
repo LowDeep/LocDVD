@@ -1,88 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_margin="6dp">
-
-    <!-- ZONE TITRE DU FILM -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/titre_du_film"
-        android:textSize="18sp"
-        android:textStyle="bold"/>
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/addDVD_titre"/>
-
-    <!-- ZONE DE LANNEE DE SORTIE -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/annee_de_sortie"
-        android:textSize="18sp"
-        android:textStyle="bold"/>
-    <EditText
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:text="@string/addDVD_annee"/>
-
-
-    <!-- ZONE ACTEURS -->
+    android:layout_height="wrap_content"
+    >
     <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp">
+
+        <!-- ZONE TITRE DU FILM -->
         <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:text="@string/acteurs"
-          android:textSize="18sp"
-          android:textStyle="bold"/>
-        <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/addDVD_addActeur"
-            android:text="+"
-            android:textStyle="bold"/>
-    </LinearLayout>
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/addDVD_acteur1"/>
-
-    <!--ZONE DU RESUME -->
-    <TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="@string/resume"
-    android:textSize="18sp"
-    android:textStyle="bold"/>
-    <EditText
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:minLines="8"
-    android:id="@+id/addDVD_resume"/>
-
-    <!-- ZONE DU BOUTON OK -->
-    <LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation ="horizontal"
-    android:gravity ="right">
-        <Button
-            android:id="@+id/addDVD_ok"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="OK"
+            android:text="@string/titre_du_film_ADD"
             android:textSize="18sp"
             android:textStyle="bold"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/addDVD_titre"/>
+
+        <!-- ZONE DE LANNEE DE SORTIE -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/annee_de_sortie_ADD"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+        <EditText
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/addDVD_annee"
+            android:inputType="number"/>
+
+
+        <!-- ZONE ACTEURS -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/acteurs_ADD"
+              android:textSize="18sp"
+              android:textStyle="bold"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/addDVD_addActeur"
+                android:text="+"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/addDVD_addActeurLayout"
+            android:orientation="vertical">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/addDVD_acteur1"
+                android:layout_margin="8dp"/>
+        </LinearLayout>
+        <!--ZONE DU RESUME -->
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/resume_ADD"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+        <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minLines="8"
+        android:id="@+id/addDVD_resume"
+        android:inputType="textCapSentences|textMultiLine"/>
+
+        <!-- ZONE DU BOUTON OK -->
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation ="horizontal"
+        android:gravity ="right">
+            <Button
+                android:id="@+id/addDVD_ok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="OK"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+
+
     </LinearLayout>
-
-
-
-</LinearLayout>
+</ScrollView>
