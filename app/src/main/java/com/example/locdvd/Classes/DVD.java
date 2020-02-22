@@ -17,7 +17,7 @@ public class DVD {
     private String[] acteurs;
     private String resume;
 
-    //Contructeur
+    //Contructeur1
     private DVD(Cursor cursor)
     {
         id = cursor.getLong(cursor.getColumnIndex("id"));
@@ -25,6 +25,11 @@ public class DVD {
         annee = cursor.getInt(cursor.getColumnIndex("annee"));
         acteurs = cursor.getString(cursor.getColumnIndex("acteurs")).split(";");
         resume = cursor.getString(cursor.getColumnIndex("resume"));
+    }
+
+    //Constructeur 2
+    public DVD(){
+
     }
 
     //GETTERS - SETTERS
@@ -92,7 +97,7 @@ public class DVD {
     }
 
     //obtenir dvd depuis son id
-    public static DVD detDVD(Context context , long id)
+    public static DVD getDVD(Context context , long id)
     {
         DVD dvd = null;
         LocalSQLiteOpenHelper helper = new LocalSQLiteOpenHelper((context));
@@ -186,6 +191,8 @@ public class DVD {
         db.delete("DVD", whereClause,whereArgs);
         db.close();
     }
+
+
 
 
 }
