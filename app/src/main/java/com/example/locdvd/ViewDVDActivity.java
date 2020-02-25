@@ -1,12 +1,16 @@
 package com.example.locdvd;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 
 import org.w3c.dom.Text;
+
+import java.nio.file.Files;
 
 public class ViewDVDActivity extends Activity {
 
@@ -15,6 +19,7 @@ public class ViewDVDActivity extends Activity {
     TextView txtActeur1;
     TextView txtActeur2;
     TextView txtResumeFilm;
+    Button buttonAddDvd;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -29,6 +34,12 @@ public class ViewDVDActivity extends Activity {
         txtActeur1 = (TextView) findViewById(R.id.acteur1);
         txtActeur2 = (TextView) findViewById(R.id.acteur2);
         txtResumeFilm = (TextView) findViewById(R.id.resumeFilm);
+        buttonAddDvd = (Button) findViewById(R.id.buttonAddDvd);
+
+        buttonAddDvd.setOnClickListener(v->{
+            Intent it = new Intent(this,addDVDActivity.class);
+            startActivity(it);
+        });
 
     }
 

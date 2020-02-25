@@ -14,12 +14,13 @@
                 android:label="@string/app_name"></activity>
 
 
-      <activity android:name=".ViewDVDActivity"></activity>
+      <activity android:name=".ViewDVDActivity"
+          >  <intent-filter>
+          <action android:name="android.intent.action.MAIN"></action>
+          <category android:name="android.intent.category.LAUNCHER"></category>
+      </intent-filter></activity>
       <activity android:name=".addDVDActivity">
-          <intent-filter>
-              <action android:name="android.intent.action.MAIN"></action>
-              <category android:name="android.intent.category.LAUNCHER"></category>
-          </intent-filter>
+
       </activity>
 
     </application>
